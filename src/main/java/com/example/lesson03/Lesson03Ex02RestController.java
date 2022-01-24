@@ -28,4 +28,11 @@ public class Lesson03Ex02RestController {
 		int rowCount = reviewBO.addReview(review);	// insert된 row의 갯수를 리턴받는다.	
 		return "success row count : " + rowCount;
 	}
+	
+	// http://localhost:8080/lesson03/ex02/2
+	@RequestMapping("/2")
+	public String ex02_2() {
+		int rowCount = reviewBO.addReviewAsField(4, "콤비네이션R", "신바다", 5.0, "역시 맛있다!!!");
+		return "success row count : " + rowCount;
+	}
 }
